@@ -18,10 +18,12 @@ max_balls_list = []
 for i in range(100):
   max_balls_list.append(simulate_ball_throw(count))
 
-plt.hist(max_balls_list, bins=range(1, count+1), align='left', alpha=0.75, edgecolor='black' )
+num_bins_hist = max(max_balls_list) - min(max_balls_list)
+
+plt.hist(max_balls_list, bins=num_bins_hist, align='left', alpha=0.75, edgecolor='black' )
 plt.title(f"Distribution of Maximum Balls in Bins (n={count})")
 plt.xlabel("Maximum Balls in a Bin")
-plt.xticks(range(1, count+1))
+plt.xticks(range(min(max_balls_list), max(max_balls_list)+1))
 plt.ylabel("Frequency")
 plt.savefig('histogram.png')
 
