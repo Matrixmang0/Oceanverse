@@ -13,7 +13,6 @@ def check_matrix(X, Y):
 
 
 def product_matrices(A, B):
-
   prod_mat = []
 
   if check_matrix(A, B):
@@ -22,7 +21,7 @@ def product_matrices(A, B):
       for j in range(len(A)):
           elem = 0
           for k in range(len(A[i])):
-            elem += A[i][k]+B[k][j]
+            elem += A[i][k]*B[k][j]
           row.append(elem)
       prod_mat.append(row)
     return prod_mat
@@ -37,5 +36,4 @@ w = [[5,6],[8,9]]
 p = [[6,8],[3,7]]
 z = [[6,0,1],[2,6,1],[8,9,1]]
 
-
-print(product_matrices(x,z))
+print(product_matrices(w,p))
