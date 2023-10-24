@@ -15,4 +15,4 @@ li1 = [5, 67, 8, 90, 12, 123, 78]
 li2 = [6, 34, 78, 11, 334, 70, 24]
 li3 = list(range(50, 0, -1))
 
-print(adaptive_bubble_sort(li3)) 
+print(adaptive_bubble_sort(li3))
