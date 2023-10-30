@@ -24,6 +24,7 @@ def navigate(pattern, dir):
       for tup in left:
         ne = pattern[-1] + tup
         pattern = np.append(pattern, ne)
+    return pattern
     
 
 def sfc(pattern, n):
